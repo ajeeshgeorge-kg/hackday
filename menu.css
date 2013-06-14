@@ -1,53 +1,165 @@
 body {
-    overflow: hidden;
+    background:#000 url(images/bg.jpg) no-repeat center center fixed;
+    overflow:hidden;
+    background-size:cover;
+    font-family: 'Open Sans Condensed', sans-serif;
 }
 
 #wrapper {
-    position: absolute;
-    left: 50%;
-    top: 50%;
+    position:absolute;
+    left:50%;
+    top:50%;
 }
 
 ul#menu {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    border: 1px solid red;
-    /*margin: -200px 0 0 -200px;*/
+    list-style-type:none;
+    margin:0;
+    padding:0;
 }
 
 ul#menu li {
-    position: absolute;
-    top: 0;
-    left: 0;
-    border: 1px solid magenta;
+    display:none;
+    position:absolute;
+    top:0;
+    left:0;
+    opacity:0;
 }
 
 ul#menu li a {
-    position: absolute;
-    background-color: green;
-    width: 50px;
-    height: 50px;
-    top: -25px;
-    left: -25px;
+    position:absolute;
+    background-color:white;
+    width:150px;
+    height:150px;
+    top:-75px;
+    left:-75px;
+    border-radius:75px;
+    text-align:center;
+    box-shadow:rgba(0,0,0,0.8) 0 0 10px;
+    color:#000;
+    text-decoration:none;
 }
 
-ul#menu li li {
-    display: none;
+ul#menu li a.gender .text {
+    text-transform: uppercase;
+    font-family: 'OstrichSansMedium';
+    font-size: 163%;
+    display: block;
+    margin: 21px 0;
 }
 
-ul#menu li li a {
-    background-color: orange;
-    display: none;
+ul#menu li a.gender .text span {
+    display: block;
+    font-size: 266%;
+    line-height: 95%;
+    -webkit-transform: skew(-12deg);
+    border-top: 1px solid #c0c0c0;
+    border-bottom: 1px solid #c0c0c0;
+    margin: 0 33px;
+    line-height: 93%;
+    margin-top: 4px;
+}
+
+ul#menu li a.gender-girl {
+    background-color:#fcc5e2;
+}
+
+ul#menu li a.gender-guy {
+    background-color:#d7eaf9;
+}
+
+ul#menu li a.style .text,
+ul#menu li a.substyle .text,
+ul#menu li a.more .text {
+    display: block;
+    text-transform: uppercase;
+    font-size: 203%;
+    font-style: italic;
+    margin-top: 48px;
+}
+
+ul#menu li a.more {
+    background-color: #ccc;
+}
+
+ul#menu li a.colour {
+    width:70px;
+    height:70px;
+    top:-35px;
+    left:-35px;
+    border-radius:35px;
+    text-indent: -2000em;
+}
+
+ul#menu li a.product,
+ul#menu li a.accessory {
+    background-size:150px;
+    background-position-y: -23px;
+    text-indent: -2000em;
+}
+
+ul#menu ul {
+    list-style:none;
 }
 
 a#cta {
+    position:absolute;
+    top:-25px;
+    left:-25px;
+    z-index:2;
+    display:block;
+    width:50px;
+    height:50px;
+    background-color:red;
+}
+
+div#centre {
+    display: none;
+    width:250px;
+    height:250px;
+    border-radius:125px;
+    position:absolute;
+    z-index:10;
+    margin:-125px 0 0 -125px;
+    box-shadow:rgba(0,0,0,0.8) 0 0 10px;
+    text-align: center;
+    background-color: #d21033;
+    color: white;
+}
+
+div#centre .text {
+    margin: 100px 40px 0 40px;
+    font-size: 122%;
+    font-style: italic;
+}
+
+div#centre.start {
+    background: #d21033 url('images/ebtd_logo.jpg') no-repeat center 35px;
+}
+
+div#centre.start .text {
+    margin: 150px 25px 0 25px;
+    border-top: 1px solid #ff758e;
+    padding-top: 10px;
+}
+
+div#centre.product .text,
+div#centre.accessory .text {
+    margin-top: 75px;
+}
+
+div#centre.accessory .done {
+    /*display: none;*/
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
     position: absolute;
-    top: -25px;
-    left: -25px;
-    z-index: 2;
-    display: block;
-    width: 50px;
-    height: 50px;
-    background-color: red;
+    z-index: 11;
+    margin: 0;
+    box-shadow: rgba(0,0,0,0.8) 0 0 10px;
+    text-align: center;
+    background-color: #23af4c;
+    color: white;
+    line-height: 100px;
+    right: -15px;
+    bottom: -15px; 
 }
